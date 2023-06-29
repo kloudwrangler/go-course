@@ -2,19 +2,12 @@ I am teaching a class on learning the go programming language. The participants 
 
 Create a lesson on the following topic:
 
-- Interfaces	
-	- Shows an example program about how a type can have many interfaces to allow it to be considered many different types.	
-	- Implementation	
-	- Method sets	
-	* Polymorphism	
-	* Explain Type Embedding	
-	- Struct embedding	
-	- Interface embedding	
-	* original list	
-	- Type assertions	
-		https://go.dev/tour/methods/15
-	- Type switches	
-		https://go.dev/tour/methods/16
+About GO
+- Features of go	
+- Where is go a good language to use?	
+- Where is go not a good language to use?	
+
+
 
 
 
