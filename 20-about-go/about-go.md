@@ -8,7 +8,7 @@ Objective: In this lesson, we will explore the features of the Go programming la
 
 Go is a statically typed, compiled programming language designed to be efficient, readable, and productive. It incorporates several key features that make it unique and powerful:
 
-a. Simplicity: Go's syntax is simple and easy to read, making it approachable for developers. It emphasizes clarity and brevity, reducing unnecessary complexity.
+a. Simplicity: 
 
 b. Concurrency: Go has built-in support for concurrency through goroutines and channels. Goroutines are lightweight threads that enable concurrent execution, while channels facilitate communication and synchronization between goroutines.
 

@@ -4,7 +4,7 @@
 
 ```txt
 
-I am teaching a class on learning the go programming language. The participants are experienced developers with no prior knowledge of the Go programming language. I would like to provide best practices when necessary. Provide additional resources.
+I am teaching a class on learning the go programming language. The participants are experienced developers with no prior knowledge of the Go programming language. 
 
 Create a lesson on the following topic:
 
