@@ -17,6 +17,12 @@ func (s Student) PrintInfo() {
 // Method with a pointer receiver for Student
 func (s *Student) UpdateGrade(newGrade int) {
 	s.grade = newGrade
+	s.logGradeTransaction()
+}
+
+// Private Method -> Users can't use this method directly
+func (s Student) logGradeTransaction() {
+	fmt.Println("Student updated their grade")
 }
 
 func main() {

@@ -17,7 +17,7 @@ theme: uncover
 ## Example Program - Multiple Interfaces
 
 Code Block:
-```
+```go
 type Writer interface {
     Write(data []byte) (int, error)
 }
