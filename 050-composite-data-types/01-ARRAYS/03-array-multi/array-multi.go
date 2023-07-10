@@ -3,25 +3,14 @@ package main
 import "fmt"
 
 func main() {
-	// Declare and initialize an array of weekdays
-	var weekdays = [7]string{"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"}
+	/* an array with 5 rows and 2 columns*/
+	var a = [5][2]int{{0, 0}, {1, 2}, {2, 4}, {3, 6}, {4, 8}}
+	var i, j int
 
-	// Print the weekdays using a for loop
-	fmt.Println("Weekdays:")
-	for i := 0; i < len(weekdays); i++ {
-		fmt.Println(weekdays[i])
+	/* output each array element's value */
+	for i = 0; i < 5; i++ {
+		for j = 0; j < 2; j++ {
+			fmt.Printf("a[%d][%d] = %d\n", i, j, a[i][j])
+		}
 	}
-
-	// Access and print a specific weekday
-	fmt.Println("Third weekday:", weekdays[2])
-
-	// Assign one array to another
-	var newWeekdays = weekdays
-
-	// Modify a value in the newWeekdays array
-	newWeekdays[5] = "Updated Saturday"
-
-	// Print the original and modified arrays
-	fmt.Println("Original weekdays:", weekdays)
-	fmt.Println("Modified weekdays:", newWeekdays)
 }
