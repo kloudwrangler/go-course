@@ -10,7 +10,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/aldorperez1/100-concurrency/80-concurrency-patterns-and-bp/pool"
+	"github.com/aldorperez1/go-course/100-concurrency/80-concurrency-patterns-and-bp/pool"
 )
 
 const (
