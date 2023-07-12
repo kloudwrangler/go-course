@@ -2,9 +2,43 @@ package main
 
 import "fmt"
 
-// Comparable interface for type constraint
 type Comparable interface {
+	LessThan(other interface{}) bool
 	Equals(other interface{}) bool
+}
+
+type MyInt int
+type MyString string
+
+func (i MyInt) LessThan(other interface{}) bool {
+	if val, ok := other.(MyInt); ok {
+		return i < val
+	}
+	return false
+}
+
+// Implement the Equals method for type int
+func (i MyInt) Equals(other interface{}) bool {
+	if val, ok := other.(MyInt); ok {
+		return i == val
+	}
+	return false
+}
+
+// Implement the LessThan method for type string
+func (s MyString) LessThan(other interface{}) bool {
+	if val, ok := other.(MyString); ok {
+		return s < val
+	}
+	return false
+}
+
+// Implement the Equals method for type string
+func (s MyString) Equals(other interface{}) bool {
+	if val, ok := other.(MyString); ok {
+		return s == val
+	}
+	return false
 }
 
 // Stack represents a generic stack
@@ -37,24 +71,8 @@ func (s *Stack[T]) IsEmpty() bool {
 	return len(*s) == 0
 }
 
-// Implement the Equals method for type string
-func (s string) Equals(other interface{}) bool {
-	if val, ok := other.(string); ok {
-		return s == val
-	}
-	return false
-}
-
-// Implement the Equals method for type int
-func (i int) Equals(other interface{}) bool {
-	if val, ok := other.(int); ok {
-		return i == val
-	}
-	return false
-}
-
 func main() {
-	stack := NewStack[string]()
+	stack := NewStack[MyString]()
 	stack.Push("Alice")
 	stack.Push("Bob")
 	stack.Push("Charlie")
@@ -65,7 +83,7 @@ func main() {
 		fmt.Println(item)
 	}
 
-	numStack := NewStack[int]()
+	numStack := NewStack[MyInt]()
 	numStack.Push(10)
 	numStack.Push(20)
 	numStack.Push(30)
