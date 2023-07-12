@@ -17,5 +17,5 @@ func main() {
 	fmt.Println(<-bufferedCh)
 
 	// Uncomment the line below to demonstrate blocking behavior
-	// fmt.Println(<-bufferedCh)
+	fmt.Println(<-bufferedCh)
 }

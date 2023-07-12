@@ -6,7 +6,10 @@ import (
 
 func ping(pings chan<- string, msg string) {
 	pings <- msg
+	x := <-pings
 	fmt.Println("Ping")
+	fmt.Println(x)
+
 }
 
 func pong(pings <-chan string, pongs chan<- string) {
